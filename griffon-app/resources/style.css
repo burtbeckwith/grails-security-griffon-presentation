@@ -1,0 +1,96 @@
+/*
+see http://griffon.codehaus.org/CSSBuilder
+
+Valid property names are "font-family", "font-size", "font-weight", "font-style", "color", "background-color"
+
+cssConfig is set in Initialize.groovy
+*/
+
+.header, .footer, .footer-text, .footer-text2, .bullet, .greyed, .demo,
+.H1, .H1o, .H2, .H2o, .H4, .bigfont, .link, .imageSource, .subheader {
+	font-family: '$cssConfig.fontFamily';
+	color: '$cssConfig.color';
+}
+
+.header, .footer, .footer-text, .footer-text2, .H1, .H1o, .H2, .H2o, .H4 {
+	font-weight: bold;
+}
+
+.header {
+	font-size: '${((screenWidth * 46)/cssConfig.fontScreenWidth) as int}';
+	color: '$cssConfig.headerColor';
+	swing-horizontal-text-position: center;
+	swing-halign: center;
+}
+
+.footer {
+	font-size: '${((screenWidth * 18)/cssConfig.fontScreenWidth) as int}';
+	color: '$cssConfig.footerColor';
+}
+
+.bullet, .greyed, .link {
+	font-size: '${((screenWidth * 36)/cssConfig.fontScreenWidth) as int}';
+}
+
+.greyed {
+	color: '$cssConfig.greyedColor';
+}
+
+.link {
+	color: '$cssConfig.linkColor';
+}
+
+.demo {
+	font-size: '${((screenWidth * 28)/cssConfig.fontScreenWidth) as int}';
+}
+
+.codeEditor {
+	font-size: '${((screenWidth * 22)/cssConfig.fontScreenWidth) as int}';
+}
+
+.H1 {
+	font-size: '${((screenWidth * 48)/cssConfig.fontScreenWidth) as int}';
+}
+
+.H1o {
+	font-size: '${((screenWidth * 48)/cssConfig.fontScreenWidth) as int}';
+	color: #D35600;
+}
+
+.H2 {
+	font-size: '${((screenWidth * 40)/cssConfig.fontScreenWidth) as int}';
+}
+
+.H2o {
+	font-size: '${((screenWidth * 40)/cssConfig.fontScreenWidth) as int}';
+	color: #D35600;
+}
+
+.H4 {
+	font-size: '${((screenWidth * 24)/cssConfig.fontScreenWidth) as int}';
+}
+
+.code {
+	font-family: '$cssConfig.codeFontFamily';
+	font-size: '${((screenWidth * 30)/cssConfig.fontScreenWidth) as int}';
+	color: '$cssConfig.codeColor';
+}
+
+.bigfont, .bigfont-red {
+	font-size: '${((screenWidth * 60)/cssConfig.fontScreenWidth) as int}';
+}
+
+.bigfont-red {
+	color: #ff0000;
+}
+
+.imageSource {
+	color: '$cssConfig.imageSourceColor';
+	font-size: '${((screenWidth * 15)/cssConfig.fontScreenWidth) as int}';
+}
+
+.subheader {
+	font-weight: bold;
+	font-size: '${((screenWidth * 30)/cssConfig.fontScreenWidth) as int}';
+	color: '$cssConfig.subHeaderColor';
+}
